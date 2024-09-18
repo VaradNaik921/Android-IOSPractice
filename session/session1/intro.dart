@@ -22,7 +22,7 @@ void main() {
 
   //bool and String
   bool isUnderAge = false;
-  String name = 'Varad';
+  String name = 'John';
   print('Name: $name is underage : $isUnderAge');
 
   //List
@@ -36,7 +36,7 @@ void main() {
 
   //Map
   Map myDetail = {
-    'Name': 'varad',
+    'Name': 'John',
     'age': 20,
     'underage': false,
     'score': score
