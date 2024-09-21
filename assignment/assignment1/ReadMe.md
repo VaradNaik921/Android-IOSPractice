@@ -1,5 +1,5 @@
 # Assignment 1 Outputs:
-## 1. Inheritance: 
+## 1. Inheritance:
 ![](assets/Inheritance.png)
 
 ## 2. Abstract:
