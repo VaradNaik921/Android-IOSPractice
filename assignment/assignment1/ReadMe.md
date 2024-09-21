@@ -3,7 +3,7 @@
 ![](assets/Inheritance.png)
 
 ## 2. Abstract:
-![](assets/Abstract.png)
+![](assets/Abstact.png)
 
 ## 3. Interface:
 ![](assets/Interface.png)
