@@ -35,7 +35,7 @@ class MyRestaurantDatabase{
     },
     5: {
       "id":5, 
-      "name":'Aglio Oglio',
+      "name":'Aglio Olio',
       "currency": 'Rs',
       "price": 100.00,
       "categoryId": 2,
@@ -46,7 +46,28 @@ class MyRestaurantDatabase{
       "currency": 'Rs',
       "price": 50.00,
       "categoryId": 3,
-    }
+    },
+  7: {
+      "id": 7,
+      "name": 'Mango Smoothie',
+      "currency": 'Rs',
+      "price": 80.00,
+      "categoryId": 3,
+    },
+  8: {
+      "id": 8,
+      "name": 'Paneer Tikka',
+      "currency": 'Rs',
+      "price": 180.00,
+      "categoryId": 4,
+    },
+  9: {
+      "id": 9,
+      "name": 'Dal Makhani',
+      "currency": 'Rs',
+      "price": 150.00,
+      "categoryId": 4,
+    },
   };
   Map<int, dynamic> categories ={
     1:{
@@ -63,6 +84,11 @@ class MyRestaurantDatabase{
     3:{
       "id":3,
       "name":"Drink",
+      "description":"",
+    },
+    4:{
+      "id":4,
+      "name":"Indian Main Course",
       "description":"",
     }
   };

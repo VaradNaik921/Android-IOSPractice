@@ -50,13 +50,26 @@ void menuScreen() {
 bool verifyOrder() {
   final random = Random();
   final otp = random.nextInt(9000) + 1000;
-  print('Enter OTP to confirm your order: $otp');
+  bool isVerified = false;
 
-  final userOtp = stdin.readLineSync();
-  if (userOtp == otp.toString()) {
-    print("Order confirmed!".green);
-    return true;
+  while (!isVerified) {
+    print('Enter OTP to confirm your order: $otp');
+    
+    final userOtp = stdin.readLineSync();
+    
+    if (userOtp == otp.toString()) {
+      print("Order confirmed!".green);
+      isVerified = true;
+      return true;
+    } 
+    else {
+      print("Verification failed, please try again.");
+      print("Do you want to try again? (y/n): ");
+      final retry = stdin.readLineSync();
+      if (retry?.toLowerCase() != 'y') {
+        return false;
+      }
+    }
   }
-  
   return false;
 }

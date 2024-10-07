@@ -16,17 +16,26 @@ class MyRestaurantService{
   }
 
   void addMenuToCart(int id){
-    final map = database.findMenuById(id);
+    final map = database.findMenuById(id.abs());
     // ignore: unnecessary_null_comparison
     if (map == null) return;
     
     final menu = MenuModel.fromMap(map);
-    if(cart.containsKey(menu)){
-      cart[menu] = cart[menu]! + 1;
-    } else{
-      cart.addAll({
+    final shouldAdd = id > 0;
+    if (shouldAdd){
+      if(cart.containsKey(menu)){
+        cart[menu] = cart[menu]! + 1;
+      } 
+      else{
+        cart.addAll({
         menu: 1,
-      });
+        });
+      }
+    }
+    else{
+      if(cart.containsKey(menu)){
+        cart[menu] = cart[menu]! > 0 ?cart[menu]!-1 : 0;
+      }
     }
   }
 
